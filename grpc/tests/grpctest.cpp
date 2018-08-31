@@ -23,6 +23,7 @@
 
 using namespace MyGame::Example;
 int builder_tests();
+int withasync_generic();
 
 // The callback implementation of our server, that derives from the generated
 // code. It implements all rpcs specified in the FlatBuffers schema.
@@ -166,6 +167,7 @@ int grpc_server_test() {
 }
 
 int main(int /*argc*/, const char * /*argv*/ []) {
-  return builder_tests() + grpc_server_test();
+  //return builder_tests() + grpc_server_test() + withasync_generic();
+  return withasync_generic();
 }
 
